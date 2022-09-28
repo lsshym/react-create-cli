@@ -11,6 +11,7 @@ import chalk from "chalk";
 import figlet from "figlet";
 import { __dirname, packageFile } from "../src/utils.mjs";
 import { createFcSync } from "../src/create.mjs";
+import { test } from "../src/test.mjs";
 
 const program = new Command();
 program
@@ -26,12 +27,16 @@ program
     .version(`version ${packageFile.version}`)
     .usage("<command> [option]");
 
+program.option("-t, --test", "测试命令").action((name, option) => {
+    console.log("test", name, option);
+    test();
+});
 program
     // 监听 --help 执行
     .on("--help", () => {
         console.log(
             "\r\n" +
-                figlet.textSync("niubi", {
+                figlet.textSync("R C C", {
                     horizontalLayout: "default",
                     verticalLayout: "default",
                     width: 80,
@@ -45,7 +50,6 @@ program
             )} for detailed usage of given command\r\n`
         );
     });
-console.log('process.argv',process.argv)
 program.parse(process.argv);
 
 // 自定义文本信息
