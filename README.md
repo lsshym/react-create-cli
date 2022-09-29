@@ -1,5 +1,6 @@
-# react-create-cli
-
+# react-create-generator
+妈的名字被占用了
+好名都被狗取了
 # 项目信息地址
 万万没想到这个东西居然是硬拼出来的
 

@@ -1,5 +1,5 @@
 {
-    "name": "react-create-cli",
+    "name": "react-create-generator",
     "version": "1.0.0",
     "description": "react项目创建脚手架",
     "bin": {
@@ -34,7 +34,7 @@
     ],
     "license": "MIT",
     "keywords": [
-        "react-create-cli",
+        "react-create-generator",
         "rcc",
         "react项目脚手架"
     ]
