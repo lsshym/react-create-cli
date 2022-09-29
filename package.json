@@ -24,10 +24,18 @@
         "type": "git",
         "url": "git+https://github.com/lsshym/react-create-cli.git"
     },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/lsshym/react-create-cli/issues"
+    "author": {
+        "name": "lsshym",
+        "email": "lsshym9@gmail.com"
     },
-    "homepage": "https://github.com/lsshym/react-create-cli#readme"
+    "files": [
+        "bin",
+        "src"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "react-create-cli",
+        "rcc",
+        "react项目脚手架"
+    ]
 }
