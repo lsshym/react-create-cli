@@ -1,16 +1,17 @@
 import axios from "axios";
 axios.interceptors.response.use((res) => {
-    console.log("res 这是啥", res);
     return res.data;
 });
 const templateUrl = "https://api.github.com/repos/lsshym/react-context";
+const testeUrl = "https://api.github.com/orgs/zhurong-cli/repos";
 
 /**
  * 获取模板列表
  * @returns Promise
  */
 async function getRepoList() {
-    return axios.get(templateUrl);
+    // return axios.get(templateUrl);
+    return axios.get(testeUrl);
 }
 
 /**
@@ -22,8 +23,4 @@ async function getTagList(repo) {
     return axios.get(`https://api.github.com/repos/zhurong-cli/${repo}/tags`);
 }
 
-module.exports = {
-    getRepoList,
-    getTagList,
-};
-
+export { getRepoList, getTagList };
