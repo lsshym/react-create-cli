@@ -1,6 +1,6 @@
 {
     "name": "react-create-generator",
-    "version": "1.0.0",
+    "version": "1.0.1-0",
     "description": "react项目创建脚手架",
     "bin": {
         "rcc": "bin/index.mjs"
