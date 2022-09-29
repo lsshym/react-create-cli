@@ -36,12 +36,13 @@ class Generator {
     // 核心创建逻辑
     async create() {
         // 1）获取模板名称
-        const repo = await this.getRepo();
+        // const repo = await this.getRepo();
         // 2) 获取 tag 名称
-        const tag = await this.getTag(repo);
+        // const tag = await this.getTag(repo);
 
         // // 3）下载模板到模板目录
-        await this.download(repo, tag);
+        // await this.download(repo,tag);
+        await this.download();
 
         // // 4）模板使用提示
         // console.log(
@@ -91,11 +92,12 @@ class Generator {
         // 3）return 用户选择的 tag
         return tag;
     }
-    async download(repo, tag) {
+    async download() {
         // 1）拼接下载地址
-        const requestUrl = `zhurong-cli/${repo}${tag ? "#" + tag : ""}`;
+        // https://github.com/lsshym/react-context
+        // const requestUrl = `zhurong-cli/${repo}${tag ? "#" + tag : ""}`;
+        const requestUrl = `lsshym/react-context`;
 
-        console.log('requestUrl',requestUrl)
         // 2）调用下载方法
         await wrapLoading(
             this.downloadGitRepo, // 远程下载方法

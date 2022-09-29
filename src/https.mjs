@@ -10,8 +10,8 @@ const testeUrl = "https://api.github.com/orgs/zhurong-cli/repos";
  * @returns Promise
  */
 async function getRepoList() {
-    // return axios.get(templateUrl);
-    return axios.get(testeUrl);
+    return axios.get(templateUrl);
+    // return axios.get(testeUrl);
 }
 
 /**
