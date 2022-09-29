@@ -1,11 +1,11 @@
 import fs from "fs-extra";
 import path from "path";
 import inquirer from "inquirer";
+import Generator from "./Generator.mjs";
 
 const createFcSync = async function (name, options) {
     // 当前命令行选择的目录
     const cwd = process.cwd();
-    console.log("cwd", cwd);
     // 需要创建的目录地址
     const targetAir = path.join(cwd, name);
 
@@ -43,6 +43,8 @@ const createFcSync = async function (name, options) {
             }
         }
     }
+    const generator = new Generator(name, targetAir);
+    generator.create();
 };
 
 export { createFcSync };

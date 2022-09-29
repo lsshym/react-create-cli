@@ -27,7 +27,7 @@ program
     .version(`version ${packageFile.version}`)
     .usage("<command> [option]");
 
-program.option("-t, --test", "测试命令").action((name, option) => {
+program.command('config [value]').option("-t, --test", "测试命令").action((name, option) => {
     console.log("test", name, option);
     test();
 });
